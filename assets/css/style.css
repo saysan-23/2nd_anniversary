@@ -1,0 +1,86 @@
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(180deg,#081a33,#0b3c6f,#0e5aa3);
+  color:white;
+  text-align:center;
+  overflow:hidden;
+
+}
+
+.timer {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+
+.container{
+  padding:70px 20px;
+}
+
+h1,h2{
+  margin:10px 0;
+}
+
+.btn{
+  background:#4fc3f7;
+  color:white;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  margin-top:25px;
+  box-shadow:0 0 15px #4fc3f7;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* CLOCK */
+.clock{
+  position:fixed;
+  top:10px;
+  right:20px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* LOVE */
+.love{
+  position:fixed;
+  color:#6ecbff;
+  font-size:20px;
+  animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-100vh);opacity:0;}
+}
+
+/* Typing */
+.typing{
+  border-right:2px solid white;
+  display:inline-block;
+  white-space:pre-line;
+  overflow:hidden;
+}
+
+/* Slideshow */
+.slideshow img{
+  width:260px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(255,255,255,0.4);
+}
+
+/* Responsive */
+@media(max-width:600px){
+  h1{font-size:22px;}
+  h2{font-size:18px;}
+  .slideshow img{width:200px;}
+}

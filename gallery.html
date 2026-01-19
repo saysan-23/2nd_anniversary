@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kenangan Kita</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="clock" class="clock"></div>
+<div id="timer" class="timer"></div>
+
+<div class="container">
+  <h2>Sedikit Moment Kita</h2>
+
+  <div class="slideshow">
+    <img id="slide" src="assets/images/foto1.jpeg" alt="foto kenangan">
+  </div>
+
+<audio id="bgm" loop preload="auto">
+  <source src="assets/music/sempurna.mp3.mp3" type="audio/mpeg">
+</audio>
+
+  <br>
+  <a href="suprise.html" class="btn">Buka Pesan Special ⇢❥</a>
+</div>
+
+<!-- main.js -->
+<script src="assets/js/main.js"></script>
+
+<!-- slideshow aman -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const photos = [
+    "assets/images/foto1.jpeg",
+    "assets/images/foto2.jpeg",
+    "assets/images/foto3.jpeg",
+    "assets/images/foto4.jpeg"
+  ];
+
+  let index = 0;
+  const slide = document.getElementById("slide");
+
+  // cek apakah gambar ada
+  if(slide){
+    setInterval(function(){
+      index = (index + 1) % photos.length;
+      slide.src = photos[index];
+    }, 2500);
+  }
+
+});
+</script>
+
+</body>
+</html>

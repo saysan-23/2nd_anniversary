@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Anniversary 💙</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div id="clock" class="clock"></div>
+<div id="timer" class="timer"></div>
+
+
+<audio id="bgm" loop >
+  <source src="assets/music/sempurna.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<button id="startMusic" class="btn">💙 Mulai Cerita</button>
+<a href="story.html" class="btn" id="goStory" style="display:none;">Awal Kita Komunikasi ⇢❥</a>
+
+<script>
+const bgm = document.getElementById("bgm");
+const startBtn = document.getElementById("startMusic");
+const goBtn = document.getElementById("goStory");
+
+startBtn.addEventListener("click", ()=>{
+  bgm.play();
+  sessionStorage.setItem("musicStarted","yes");
+  startBtn.style.display="none";
+  goBtn.style.display="inline-block";
+});
+</script>
+
+<div class="container">
+  <h1>Happy 2nd Anniversary 💙</h1>
+  <h2>23 Januari 2024 - 23 Januari 2026</h2>
+  <p>Mini website cinta kita 😆</p>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
